@@ -140,7 +140,7 @@ class PINN(tf.Module):
 
 @tf.function
 def training_loop(model, epochs, dataset, batch_size, optimizer):
-    print('tracing...')
+    print('Graph traced')
     size = int((len(dataset)//batch_size)*epochs)
     loss_hist = tf.TensorArray(dtype=tf.float32, size = size, dynamic_size=False)
     for _epoch in tf.range(epochs, dtype = tf.int64):

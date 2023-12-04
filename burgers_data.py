@@ -60,7 +60,8 @@ def evolve_burger(x, t, mu, ep, mode, sampler = None):
     
     if mode == 'sine':
         a, c = next(sampler)
-        b = np.minimum(np.random.geometric(.2, 1), 5)[0]
+ 
+        b = np.max([np.min([np.random.geometric(.2,1)[0],5]),1])
         evolution[0] = a*np.sin(b*x+c)
         
     elif mode == 'noise':
