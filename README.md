@@ -55,4 +55,4 @@ u_{x, t+\tau} &= u_{x-h, t}\left[\frac{\mu\tau}{h^2}\right] + u_{x,t}u_{x+h,t}\l
 \end{align}
 $$
 
-<img src="images/burgers_data.png" align="center" width="750px"> <br>
+<img src="images/burgers_data.png" align="center" width="1050px"> <br>
