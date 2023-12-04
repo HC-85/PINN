@@ -63,7 +63,7 @@ def evolve_burger(x, t, mu, ep, mode, sampler = None):
  
         b = np.max([np.min([np.random.geometric(.2,1)[0],5]),1])
         if a==0 or b==0:
-            raise Exception('a and b must be non-zero')
+            raise Exception(f'{a}, {b}')
         evolution[0] = a*np.sin(b*x+c)
         
     elif mode == 'noise':

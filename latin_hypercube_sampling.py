@@ -9,5 +9,5 @@ def latin_hypercube_sampling(param_ranges, n_samples):
         params_ind = hypercube[sample]
         sampled_params = []
         for i, _ in enumerate(param_ranges):
-            sampled_params.append(params_ind[i]*deltas[i])
+            sampled_params.append((params_ind[i]+1)*deltas[i])
         yield sampled_params
