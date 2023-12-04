@@ -39,8 +39,8 @@ def build_dataset(x, t, mu, ep, num_evols, mode:dict = {'sine':.5, 'noise':.5}):
     state = tf.TensorArray(dtype = tf.float32, size = num_evols, dynamic_size=False)
     target = tf.TensorArray(dtype = tf.float32, size = num_evols, dynamic_size=False)
     
-    lhs_sampler = latin_hypercube_sampling(((0.1, 1), (0, 2*np.pi)), num_evols//2)
     n_sine = int(num_evols*mode['sine'])
+    lhs_sampler = latin_hypercube_sampling(((0.1, 1), (0, 2*np.pi)), n_sine)
     for i in range(n_sine):
         evolution = evolve_burger(x, t, mu, ep, 'sine', lhs_sampler)
         state = state.write(i, evolution[:-1])
