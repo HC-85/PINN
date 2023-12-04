@@ -54,3 +54,5 @@ u_{x, t+\tau} &= \mu\tau \frac{u_{x+h, t}-2u_{x, t}+u_{x-h, t}}{h^2} - \epsilon 
 u_{x, t+\tau} &= u_{x-h, t}\left[\frac{\mu\tau}{h^2}\right] + u_{x,t}u_{x+h,t}\left[\frac{\epsilon\tau}{2h}\right] + u_{x,t}u_{x-h,t}\left[\frac{\epsilon\tau}{2h}\right] + u_{x+h, t}\left[\frac{\mu\tau}{h^2}\right]
 \end{align}
 $$
+
+<img src="images/burgers_data.png" align="center" width="750px"> <br>
